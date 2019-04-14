@@ -39,8 +39,13 @@ $("input[type='text']").keypress(function (event) {
         // delete typed text from input
         $(this).val("");
         //create a new li and add to ul
-        $("ul").prepend("<li><span>X</span> " + todoText + "</li>");
+        $("ul").prepend("<li><span><i class='far fa-trash-alt'></i></span> " + todoText + "</li>");
 
 
     }
+});
+
+//Add button toggle
+$("#edit-icon").on("click", function () {
+    $("input[type='text']").fadeToggle();
 });
